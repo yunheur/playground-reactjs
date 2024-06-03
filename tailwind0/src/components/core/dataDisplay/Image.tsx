@@ -2,7 +2,7 @@ import { BoxProps } from "../layout/Box";
 
 export type ImageProps = {
   src: string;
-  resizeMode: ImageResizeMode | undefined;
+  objectFit: ImageResizeMode | undefined; // TODO: objectFit으로 변경
 } & BoxProps;
 export type ImageResizeMode =
   | "cover"
@@ -13,7 +13,7 @@ export type ImageResizeMode =
 
 export default function Image({
   src,
-  resizeMode = "cover",
+  objectFit: resizeMode = "cover",
   className = "",
   ...props
 }: ImageProps) {

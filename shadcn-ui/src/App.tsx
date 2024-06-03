@@ -1,4 +1,5 @@
 import Accordion from "./components/Accordion";
+import { NavigationMenuDemo } from "./components/NavigationMenuDemo";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         </Card>
         <Card title="Accordion">
           <Accordion />
+        </Card>
+        <Card title="Navigation">
+          <NavigationMenuDemo />
         </Card>
       </div>
     </div>

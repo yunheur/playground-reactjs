@@ -13,7 +13,7 @@ export default function Card({ data }: Props) {
       <Image
         className="w-full h-[122px]"
         src={`https://image.collexx.io/${data.imageName}`}
-        resizeMode="cover"
+        objectFit="cover"
       />
       <Text className="pt-[27px] text-[16px] font-bold" numberOfLines={1}>
         {data.name}

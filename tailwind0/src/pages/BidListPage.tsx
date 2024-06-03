@@ -25,11 +25,12 @@ export default function BidListPage() {
           setText(text);
           console.log("text", text);
         }}
+        style={{}}
       />
       <Image
         className="w-full h-[122px]"
         src={`https://image.collexx.io/b44d0e87-532a-4425-8e82-da5934c70db2.png`}
-        resizeMode="cover"
+        objectFit="cover"
         onClick={() => {
           console.log("hello");
         }}
