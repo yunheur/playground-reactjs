@@ -1,12 +1,19 @@
-import Accordion from "./components/Accordion";
-import { NavigationMenuDemo } from "./components/NavigationMenuDemo";
+import { Button } from "@/components/ui/button";
+import Accordion from "../components/Accordion";
+import { NavigationMenuDemo } from "../components/NavigationMenuDemo";
+import { useNavigate } from "react-router-dom";
 
-function App() {
+export function RootPage() {
+  const navigate = useNavigate()
+
   return (
     <div className="p-6">
       <h1 className="text-3xl font-bold">Shadcn UI</h1>
       <div className="h-4" />
       <div className="flex flex-col gap-y-4">
+        <Card title="Examples">
+          <Button onClick={() => navigate("/examples/forms")}>Form</Button>
+        </Card>
         <Card title="Flex">
           <span className="bg-red-100">span</span>
           <span className="bg-red-200">span</span>
@@ -40,5 +47,3 @@ function Card({ title, children }: React.PropsWithChildren<{ title: string }>) {
     </div>
   );
 }
-
-export default App;
